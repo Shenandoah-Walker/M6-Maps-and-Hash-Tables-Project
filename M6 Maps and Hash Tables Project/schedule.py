@@ -41,3 +41,23 @@ class Schedule:
         last_name = last_name.upper()
         return [item for item in self.dictionary.values() if item.Instructor.split(",")[0].upper() == last_name]
 
+
+    def load_data(self, filename):
+        with open(filename, encoding="utf-8-sig", newline="") as csvfile:
+            entries = csv.DictReader(csvfile)
+
+            for entry in entries:
+                item = ScheduleItem(
+                    Subject=entry["Subject"],
+                    Catalog=entry["Catalog"],
+                    Section=entry["Section"],
+                    Component=entry["Component"],
+                    Session=entry["Session"],
+                    Units=int(entry["Units"]),
+                    TotEnrl=int(entry["TotEnrl"]),
+                    CapEnrl=int(entry["CapEnrl"]),
+                    Instructor=entry["Instructor"]
+                )
+                self.add_entry(item)
+
+
