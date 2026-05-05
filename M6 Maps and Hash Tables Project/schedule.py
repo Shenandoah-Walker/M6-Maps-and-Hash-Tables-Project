@@ -39,5 +39,5 @@ class Schedule:
 
     def find_by_instructor_last_name(self, last_name):
         last_name = last_name.upper()
-        return [item for item in self.dictionary.values() if item.Instructor.split()[-1].upper() == last_name]
+        return [item for item in self.dictionary.values() if item.Instructor.split(",")[0].upper() == last_name]
 
