@@ -29,4 +29,15 @@ class Schedule:
             item.print()
 
     def find_by_subject(self, subject):
+        subject = subject.upper()
+        return [item for item in self.dictionary.values() if item.Subject == subject]
+
+    def find_by_subject_catalog(self, subject, catalog):
+        subject = subject.upper()
+        catalog = catalog.upper()
+        return [item for item in self.dictionary.values() if item.Subject == subject and item.Catalog == catalog]
+
+    def find_by_instructor_last_name(self, last_name):
+        last_name = last_name.upper()
+        return [item for item in self.dictionary.values() if item.Instructor.split()[-1].upper() == last_name]
 
