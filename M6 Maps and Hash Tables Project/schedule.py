@@ -5,6 +5,7 @@ from schedule_item import ScheduleItem
 class Schedule:
     def __init__(self, filename):
         self.dictionary = {}
+        self.load_data(filename)
 
     def add_entry(self, item: ScheduleItem):
         key = item.get_key()
