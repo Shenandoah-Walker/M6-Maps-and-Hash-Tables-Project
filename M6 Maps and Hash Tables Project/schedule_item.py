@@ -22,8 +22,8 @@ class ScheduleItem:
             f"{self.Section:<9}"
             f"{self.Component:<12}"
             f"{self.Session:<9}"
-            f"{self.Units:>7}"
-            f"{self.TotEnrl:>9}"
-            f"{self.CapEnrl:>9}"
-            f"{self.Instructor:<20}"
+            f"{self.Units:^7}"
+            f"{self.TotEnrl:^9}"
+            f"{self.CapEnrl:^9}"
+            f"{self.Instructor:<30}"
         )

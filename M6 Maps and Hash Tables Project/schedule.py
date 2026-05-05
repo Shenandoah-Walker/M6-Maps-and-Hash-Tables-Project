@@ -18,10 +18,10 @@ class Schedule:
             f"{'Section':<9}"
             f"{'Component':<12}"
             f"{'Session':<9}"
-            f"{'Units':>7}"
-            f"{'TotEnrl':>9}"
-            f"{'CapEnrl':>9}"
-            f"{'Instructor':<20}"
+            f"{'Units':^7}"
+            f"{'TotEnrl':^9}"
+            f"{'CapEnrl':^9}"
+            f"{'Instructor':<30}"
         )
 
     def print(self):

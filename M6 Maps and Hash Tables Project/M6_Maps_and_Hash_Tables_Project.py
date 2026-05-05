@@ -1,4 +1,4 @@
-#Test program for M6 Maps and Hash Tables Project
+#Test program for M6 Maps and Hash Tables Project (also main.py)
 
 from schedule import Schedule
 
@@ -8,6 +8,7 @@ print("This program contains the VPCC STEM 2022 Summer Schedule of Classes.")
 print()
 
 while True:
+    print()
     print("Menu:")
     print("Please select from the options below. Enter the number of your choice.")
     print("1. Display all (print the full course schedule)")
